@@ -1,0 +1,23 @@
+Thanks to the other members of team Blind Elmo: Zhao, Chris, Lewis Clark.
+
+I haven't reviewed snake in a long time so a lot of this stuff was confusing at first.
+
+Line 9: "from random import randrange" was confusing to me as I didn't understand why not just import random.
+The reason for this is to import less stuff since only randrange was being used.
+The entire module of random is not needed.
+
+I didn't know what module sys was but my group members told me that sys:
+is related to functions involving the system (computar) including the terminal.
+
+If strings are not empty, they are equal to true.
+Line 20: "names = [name for name in names if name]"
+
+I didn't understand why we needed a main function.
+Having a main function ensures that when you call a function in the program, it doesn't run it.
+If you were to not have a main function, everytime you call something from the program,
+it would run the program.
+Lines 38-39:
+"if __name__ == "__main__":
+    main()"
+
+That is all. It also helped review stuff I haven't seen in 3+ years. 
