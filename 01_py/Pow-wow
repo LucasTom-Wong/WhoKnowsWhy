@@ -1,0 +1,7 @@
+Line 8-9, importing modules sys and random (but only randrange)
+
+Lines 11-21, function read_names which reads names from a text file piped into the command line. Each line in the text file is one name. Any empty lines are not read. Returns a list of strings. Each string is a name.
+
+Lines 23-36, main function. Takes two text files and uses function read_names to turn each text file into a list. Then it combines the lists and picks a random name from the list to print.
+
+Lines 38-39, calls upon main function if it is the program is run.
