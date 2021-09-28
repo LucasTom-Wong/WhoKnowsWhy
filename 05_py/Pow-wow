@@ -1,0 +1,9 @@
+Names assignment.
+Combined two programs.
+
+names.py will take two text files as arguments.
+Each file will represent one period.
+Then you will be asked to put an input of 1, 2, or 3.
+If you input 1, you will get a random name from period 1.
+If you input 2, you will get a random name from period 2.
+If you input 3, you will get a random name from a list containing both periods.
