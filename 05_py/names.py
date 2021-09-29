@@ -7,6 +7,17 @@ Additonal contributors: Christopher Liu, Lucas Lee, Zhaoyu Lin,
 2021-09-21
 """
 
+# SUMMARY OF TRIO DISCUSSION
+# names.py will take two text files as arguments.
+# Each file will represent one period.
+# Then you will be asked to put an input of 1, 2, or 3.
+# If you input 1, you will get a random name from period 1.
+# If you input 2, you will get a random name from period 2.
+# If you input 3, you will get a random name from a list containing both periods.
+# DISCOVERIES
+# input("String")
+# Prints "String" and asked for an input.
+
 import sys
 from random import randrange
 
