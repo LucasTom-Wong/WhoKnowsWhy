@@ -1,0 +1,40 @@
+Lucas Tom-Wong, Tobias
+SoftDev
+K<09> -- <Simple Path to Greatness/Something to do with flask>
+<2021>-<10>-<03>
+
+line 1: imports the function flask from the module flask (flask.flask)
+line 2: app? not sure what this does but it uses the flask function or something from the module flask as well as the program from (__name__)
+line 4: no clue
+line 5: denotes function hello_world
+line 6: prints the name of the program, ie: app.py or app or something like that
+line 7: returns "No hablo queso!" after running function
+line 9: runs the app??
+
+based on this i can assume that line 9 runs app
+app is Flask(__name__) probably meaning that it runs the program
+
+from a python website
+https://pythonbasics.org/flask-tutorial-routes/
+@app.route('/') is a route
+therefore i would assume @app.route("/") is the same
+app.route is used with flask as well as app = Flask(__name__)
+
+in order to run the program you need to install the Program
+
+cd into the proper directory
+create a virtual environment
+activate the environment
+then install flask with pip install Flask
+
+https://flask.palletsprojects.com/en/2.0.x/installation/
+
+i believe this will just run the file as if it didnt use flask, but with using Flask
+basically it will call itself to run
+but im not sure if it will do anything because hello_world isnt called
+not sure what app.route does still
+but im assuming that when you do app.run(), it runs the program because
+app = Flask(__name__) was called earlier which i believe it is similar to
+if __name__ == "__main__":
+    main()
+and the main function
