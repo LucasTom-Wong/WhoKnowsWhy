@@ -1,8 +1,14 @@
+Ishraq Mahid, Lucas Tom-Wong (LTW), Tomas Acuna
+SoftDev
+K14 -- Form and Function -- Utilizing Request Info
+2021-10-15
 
-
+Summary:
+We explored requests and forms. We figured out the infoflow for HTML, and how to access valuable information through Flask.
+In the case of Flask, the request object contains a lot of useful information, like User-Agent, to the request type.
+In this case, we explored the transfer of info through the username, an object we tagged onto the request through form.
 
 Results of going to http://127.0.0.1:5000/auth?username=ABCDEFGHIJKLMNOP&sub1=Submit:
-
 ***DIAG: this Flask obj ***
 <Flask 'app'>
 ***DIAG: request obj ***
@@ -19,31 +25,58 @@ Referer: http://127.0.0.1:5000/
 Accept-Language: en-us
 Accept-Encoding: gzip, deflate
 
--- app.py -- noticed --
+Questions:
+What would  other reqs (like POST) look like? I don't expect too much but just wondering if it follows this same pattern.
+Is there a cleaner way to sort through all this info or is it busywork that we will have to get used to?
 
-disp_loginpage is the main function/route
-will print stuff
-uses request (from flask)
-request might not work because we dont have a request
-no request to the template
-authenticate seems redundant, like how would you use it
-
--- app.py -- stuff --
-
-stuff printed to terminal
-returns template
-get asks for information
- - the request being made
-After submitting, it goes to authenticate
+Comments:
+Every website appears to have a request object of some sort, and will at the very least be a GET req that retrieves the website info
+from the server. Furthermore, one accesses this in Flask through the request object.
 
 
--- login.html -- noticed --
-input type text
-input type submit
-should pass on information
+Stuff Old:
 
--- login.html -- stuff --
 
-stuff printed to terminal
-returns "Waaa hoo HAAAH" on webpage
-<form action="/auth"> -> redirets to /auth with information in url
+'''
+trioTASK:
+~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
+...read for understanding all of the code below.
+Some will work as written; other sections will not. Can you predict which?
+Devise some simple tests you can run to "take apart this engine," as it were.
+Execute your tests. Process results.
+PROTIP: Insert your own in-line comments wherever they will help your future self and/or current teammates understand what is going on.
+'''
+
+    # print("\n\n\n")
+    # print("***DIAG: this Flask obj ***")
+    # print(app)
+    # print("***DIAG: request obj ***")
+
+    #Request objects predicted to not work because there is not request going to the template html
+
+    # print(request)
+    # print("***DIAG: request.args ***")
+    # print(request.args)
+    #print("***DIAG: request.args['username']  ***")
+    #print(request.args['username'])
+    # print("***DIAG: request.headers ***")
+    # print(request.headers)
+
+        #Request objects predicted to print based on what was received from the previous website, as there exists a request object
+    #to be passed.
+    # print("\n\n\n")
+    # print("***DIAG: this Flask obj ***")
+    # print(app)
+    # print("***DIAG: request obj ***")
+    # print(request.method)
+    # print("***DIAG: request.args ***")
+    # print(request.args['username'])
+    #print("***DIAG: request.args['username']  ***")
+    #print(request.args['username'])
+
+    #request has many different attribtues within it that we can utilize as a string
+    # print("***DIAG: request.headers ***")
+    # print(request.headers)
+
+    #return "Hello " + request.args['username'] + "! It's time to get Flasky!" + "\n" + "You made a " + request.method + " request just now." # response to a form submission
+    #return str(request)

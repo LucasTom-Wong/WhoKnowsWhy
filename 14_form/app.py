@@ -1,6 +1,9 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2021
+"""
+Ishraq Mahid, Lucas Tom-Wong (LTW), Tomas Acuna
+SoftDev
+K14 -- Form and Function -- Utilizing Request Info
+2021-10-15
+"""
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -11,55 +14,16 @@ from flask import request           #facilitate form submission
 
 app = Flask(__name__)    #create Flask object
 
-
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
-Some will work as written; other sections will not. Can you predict which?
-Devise some simple tests you can run to "take apart this engine," as it were.
-Execute your tests. Process results.
-PROTIP: Insert your own in-line comments wherever they will help your future self and/or current teammates understand what is going on.
-'''
-
-@app.route("/") #, methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-
-    #Request objects predicted to not work because there is not request going to the template html
-
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
     return render_template( 'login.html' )
+    #brings up the login.html page
 
-
-@app.route("/auth") # , methods=['GET', 'POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
-    #Request objects predicted to print based on what was received from the previous website, as there exists a request object
-    #to be passed.
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    #return "Waaaa hooo HAAAH"  #response to a form submission
-    return render_template( 'response.html' , user = request)
 
-
+    return render_template('response.html', username = request.args['username'], method = request.method)
+    #brings up the response.html page with username and the method request sent to the page
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
