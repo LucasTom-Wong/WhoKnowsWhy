@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <!--
-Ishraq Mahid, Lucas Tom-Wong (LTW), Tomas Acuna
+
+The Onions - Ishraq Mahid, Lucas Tom-Wong (LTW), Tomas Acuna
 SoftDev
-K14 -- Form and Function -- Utilizing Request Info
-2021-10-15
+K15 -- Sessions Greetings -- Login and Cookies
+2021-10-18
+
+
  -->
 
 
@@ -18,13 +21,17 @@ K14 -- Form and Function -- Utilizing Request Info
         Welcome, Travelers of the Intertoobz!
     </h1>
 
-
+<!--
+        {#<p>{#if fail is true#}{"Failure to login, please try again"}</p>#}
+    -->
     <h3>
         Enter your username below to proceed.
     </h3>
-    <form action="/auth_ed">
+  
+
+    <form action="/auth_ed" method = "GET">
         <input type="text" name="username">
-        <input type="text" name="password">
+        <input type="password" name="password">
 
         <input type="submit" name="sub1"> <!-- Allows you to return text as a username and press a submit button -->
     </form>

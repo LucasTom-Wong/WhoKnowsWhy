@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <!--
-Ishraq Mahid, Lucas Tom-Wong (LTW), Tomas Acuna
+
+The Onions - Ishraq Mahid, Lucas Tom-Wong (LTW), Tomas Acuna
 SoftDev
-K14 -- Form and Function -- Utilizing Request Info
-2021-10-15
+K15 -- Sessions Greetings -- Login and Cookies
+2021-10-18
+
+
  -->
 
 
 <html>
 
 <head>
-    <title> RESPONSE PAGE </title>
+    <title> WELCOME </title>
 </head>
 
 <body>
@@ -18,14 +21,19 @@ K14 -- Form and Function -- Utilizing Request Info
         The Onions: Ishraq, LTW, Tomas
     </h1>
 
-
     <h2>
-        Hello {{username}}! It's time to get Flasky!
+        Hello {{username}}! You are now Flasky!
     </h2>
 
     <h3>
         You made a {{method}} request just now.
     </h3>
+
+    <form action="/" method="POST">
+        <input type = "submit" value = "Logout">
+    </form>
+
+    <!--logout-->
 </body>
 
 </html>
