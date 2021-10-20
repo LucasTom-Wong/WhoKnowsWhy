@@ -18,14 +18,13 @@ login.html has not been altered
 
 from flask import Flask, render_template, request
 from flask import session
-from config import KEY
+#from config import KEY
 #imports modules used
 
 app = Flask(__name__)  # create Flask object
 
-app.secret_key = KEY #creates a key which is equal to theh key from a config file on your pc
+#app.secret_key = KEY #creates a key which is equal to theh key from a config file on your pc
 
-#debug = True redundant
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
