@@ -25,6 +25,7 @@ app = Flask(__name__)  # create Flask object
 
 #app.secret_key = KEY #creates a key which is equal to theh key from a config file on your pc
 
+debug = True
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
@@ -71,20 +72,21 @@ def authenticate():
         if request.method == "GET":
 
             user = request.args.get('username')
-            password = request.args.get('password')
+            passwd = request.args.get('password')
 
             if debug:
                 print("Username and Password HERE:")
                 print(user)
-                print(password)
+                print(passwd)
 
             #Hardcoded user and password
-            if(user == "Mr.Mykolyk" and password == "251"):
+            if(user == "Tobias" and passwd == "251"):
+                # print("Login Successful")
                 session['user'] = user
+                return render_template("response.html", username = user, method = request.method)
                 #renders template using credentials
-                return render_template('response.html', username = session['user'], method = request.method)
-
-            return render_template("FailedLogin.html", error = "an incorrect password or username")
+            else:
+                return render_template("FailedLogin.html", error = "an incorrect password or username")
     except:
         return render_template("FailedLogin.html", error = "bad juju")
 
