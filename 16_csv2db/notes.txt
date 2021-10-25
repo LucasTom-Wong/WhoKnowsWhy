@@ -1,0 +1,32 @@
+#The Onions - Ishraq Mahid, Lucas Tom-Wong (LTW), Tomas Acuna
+#SoftDev
+#K16 :: SQLITE3 BASICS
+#10/21/2021
+
+Sqlite is a relational database
+
+Sqlite has terminal operations
+  - starts with a period (.)
+  - ends with semicolon (;)
+
+Can be executed within python code by using db.execute("SQLITE STUFF")
+
+Inside of python text editor
+Need to import sqlite3
+
+sqlite3.connect("File_Name")
+  - Opens a database file with this File_Name
+    - If it doesn't exist, then it will create a file with the name File_Name
+
+db <- the database itself, the file which was created or opened with sqlite3.connect()
+
+c = db.cursor() <- specifies where future programs will be run as a variable
+
+c.execute(THINGY you want to do)
+
+Self explanatory... similar to git.commit and git.push (changes/git.add were already made)
+b.commit() #save changes
+db.close()
+
+
+IF NOT EXISTS is useful

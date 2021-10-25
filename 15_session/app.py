@@ -5,28 +5,19 @@ K15 -- Sessions Greetings -- Login and Cookies
 2021-10-18
 """
 
-"""
-LTW - changes 23:13 10/19/2021
-Added additional comments
-removed line 24, "debug = True", seemed redundant since below there was "app.debug = True"
-removed welcome.html and incoporated it into response.html
- as well as changed code in app.py from welcome to response
-Created a Go_Back button for FailedLogin.html
-once we finish, we can comment out the if debug code as it is only needed if we are debugging and console messages are annoying
-login.html has not been altered
-"""
-
-from flask import Flask, render_template, request
+from flask import Flask  # facilitate flask webserving
+from flask import render_template  # facilitate jinja templating
+from flask import request
 from flask import session
-#from config import KEY
-#imports modules used
+# from config import KEY
+#the conventional way:
+#from flask import Flask, render_template, request
 
 app = Flask(__name__)  # create Flask object
 
-#app.secret_key = KEY #creates a key which is equal to theh key from a config file on your pc
+# app.secret_key = KEY
 
 debug = True
-
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
     """
@@ -48,7 +39,7 @@ def disp_loginpage():
 
             #Checks to see if user exists -> logs them in if it does
             if session['user']:
-                return render_template('response.html', username = session['user'], method = request.method)
+                return render_template('Welcome.html', username = session['user'])
 
             #returns login template otherwise
             return render_template('login.html')
@@ -72,21 +63,20 @@ def authenticate():
         if request.method == "GET":
 
             user = request.args.get('username')
-            passwd = request.args.get('password')
+            password = request.args.get('password')
 
             if debug:
                 print("Username and Password HERE:")
                 print(user)
-                print(passwd)
+                print(password)
 
             #Hardcoded user and password
-            if(user == "Tobias" and passwd == "251"):
-                # print("Login Successful")
+            if(user == "Mr.Mykolyk" and password == "251"):
                 session['user'] = user
-                return render_template("response.html", username = user, method = request.method)
                 #renders template using credentials
-            else:
-                return render_template("FailedLogin.html", error = "an incorrect password or username")
+                return(render_template('response.html',username = user, method = request.method ))
+
+            return render_template("FailedLogin.html", error = "an incorrect password or username")
     except:
         return render_template("FailedLogin.html", error = "bad juju")
 
