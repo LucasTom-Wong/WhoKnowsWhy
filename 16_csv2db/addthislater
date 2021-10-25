@@ -1,0 +1,3 @@
+if (!dbExistence(db, table_name)):
+        if debug:
+            print("New Table")
