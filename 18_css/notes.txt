@@ -1,1 +1,16 @@
+Lucas (LTW) Tom-Wong, Julia (Lia) Nelson
+SoftDev
+K18 -- Comic Sans Syndrome/CSS/Learning how to do CSS, specifically the different formatting and how to do it with different methods. Those being, inline, internal, and external.
+2021-11-22
+
 https://www.lipsum.com/
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
+
+Inline:
+Declares stylization that will affect only a single html element. 
+
+Internal
+A spreadsheet but already inside the html file. Therefore you don't need to link the css file to the html file. 
+
+External:
+Uses an external css file in order to import stylizations. Apparently this is extremely common. This also allows for standardized styling. Requires link to the css spreadsheet in the html file. 
