@@ -1,4 +1,16 @@
-LTW, Lia
-SoftDev pd1
+Lucas (LTW) Tom-Wong, Julia (Lia) Nelson
+SoftDev
 K19 -- Restful API
-2021 - 10 - 23
+2021-10-23
+time spent:
+
+api key used to detect user who wants to access data and make sure nothing breaks
+? breaks url and the query string
+json -> important
+json.dump -> dict to file, json.load -> files to dict
+
+GET (must have caps) + url
+such as: GET https://api.nasa.gov/planetary/apod?api_key=BbBUhlazreBfN6DQvmGnAp6TcuBzsfUQJISPj1hK
+inside of terminal
+its a http GET request
+returns what website sends in response to request
