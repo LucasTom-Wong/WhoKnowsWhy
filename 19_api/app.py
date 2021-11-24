@@ -1,5 +1,5 @@
 """
-Lucas (LTW) Tom-Wong, Julia (Lia) Nelson
+Orange: Lucas (LTW) Tom-Wong, Julia (Lia) Nelson
 SoftDev
 K19 -- Restful API
 2021-10-23
@@ -10,9 +10,9 @@ import urllib.request
 
 app = Flask(__name__)
 
-def display_Info(storage):
-    explanation = storage.data[explanation]
-    url = storage.data[url]
+def display_Info(ssstorage):
+    explanation = ssstorage.data[explanation]
+    url = ssstorage.data[url]
     return render_template("main.html", explanation, url)
 
 @app.route("/")
