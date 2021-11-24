@@ -1,0 +1,44 @@
+body  {
+background-color: gray;
+}
+    h1 {
+position: fixed;
+top: 0;
+  height: 40px;
+width: 1500px;
+  margin-top: 15px;
+      color: white;
+      background-color: lightgray;
+    }
+    h3 {
+position: fixed;
+  margin-top: 50px;
+color: black;
+}
+    ul {
+position: fixed;
+margin-top: 80px;
+list-style: none;
+padding: 5px;
+color: white;
+    }
+    h2 {
+position: fixed;
+left: 500px;
+  margin-top: 50px;
+color: black;
+}
+    p {
+position: fixed;
+left: 500px;
+width: 1000px;
+  margin-top: 80px;
+      color: black;
+    }
+    h4 {
+position: fixed;
+width: 1500px;
+height: 40px;
+margin-top: 200px;
+color: gray;
+background-color: dimgray;
