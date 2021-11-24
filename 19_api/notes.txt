@@ -14,3 +14,5 @@ such as: GET https://api.nasa.gov/planetary/apod?api_key=BbBUhlazreBfN6DQvmGnAp6
 inside of terminal
 its a http GET request
 returns what website sends in response to request
+
+NEEDS Certificate which I don't have, therefore urlrequest fails when I try to use it
