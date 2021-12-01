@@ -1,0 +1,34 @@
+Team Orange - Lucas (LTW) Tom-Wong, Julia (Lia) Nelson
+SoftDev
+K22 - Who Does Frame Work For?
+2021-11-30
+time spent: 3.7 hours
+
+DISCO
+
+Link to spreadsheet:
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+
+Lots of javascript stuff
+  - However javascript wasn't needed and the html file still loaded without the javascript code
+
+Medium and Large refers to the size of the device screen. So a cell phone and a monitor would be different sizes.
+  - Changing the size of the window doesn't affect this.
+  - When a number is associates with small, medium, or large, it impacts the number of elements per line for a device with that screen size
+  - In order to keep important elements legible, one should use larger numbers (less elements per line) with a smaller device
+
+Cells are the measurement of size of a element
+  - More cells -> more width???/length
+
+Classes inside of classes
+
+
+
+QCC
+Can each element have multiple classes?
+What do cells mean?
+
+Q0
+Asked Shriya multiple times.
+
+Q1
