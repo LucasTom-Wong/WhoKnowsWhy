@@ -20,9 +20,13 @@ Medium and Large refers to the size of the device screen. So a cell phone and a 
 Cells are the measurement of size of a element
   - More cells -> more width???/length
 
-Classes inside of classes
+Multiple classes can coexist
 
+Div (dividers?) are really useful and important
 
+Labels will place text on top of the element.... labelling it
+
+Classes can get overwritten with other newer classes if they don't interact well.
 
 QCC
 Can each element have multiple classes?
@@ -30,5 +34,9 @@ What do cells mean?
 
 Q0
 Asked Shriya multiple times.
+Notes.txt did not exist -> ask many of the questions
 
 Q1
+Looked here for more info:
+https://get.foundation/
+Didn't find anything specifically that we wanted to use. Just wanted to read the doc a little.
