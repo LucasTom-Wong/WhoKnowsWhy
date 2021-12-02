@@ -12,7 +12,7 @@ app = Flask(__name__)
 def display_Info(ssstorage):
     explanation = ssstorage['explanation']
     url = ssstorage['url']
-    return render_template("main.html", explanation, url)
+    return render_template("main.html", explanation = explanation, url = url)
 
 @app.route("/")
 def main():
@@ -20,7 +20,7 @@ def main():
     url += str(open("key_nasa.txt", "r").read())
     nasa = urllib.request.urlopen(url)
     library_of_info = json.loads(nasa.read())
-    display_Info(library_of_info)
+    return display_Info(library_of_info)
     # print(library_of_info)
 
 if __name__ == "__main__":

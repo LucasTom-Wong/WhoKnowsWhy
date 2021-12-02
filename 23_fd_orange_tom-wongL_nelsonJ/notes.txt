@@ -1,0 +1,41 @@
+Team Orange - Lucas (LTW) Tom-Wong, Julia (Lia) Nelson
+SoftDev
+K23 - No. 2?
+2021-12-01
+time spent: 2.8 hours
+
+DISCO
+
+Link to spreadsheet:
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+
+Lots of javascript stuff
+  - However javascript wasn't needed and the html file still loaded without the javascript code
+
+Medium and Large refers to the size of the device screen. So a cell phone and a monitor would be different sizes.
+  - Changing the size of the window doesn't affect this.
+  - When a number is associates with small, medium, or large, it impacts the number of elements per line for a device with that screen size
+  - In order to keep important elements legible, one should use larger numbers (less elements per line) with a smaller device
+
+Cells are the measurement of size of a element
+  - More cells -> more width???/length
+
+Multiple classes can coexist
+
+Div (dividers?) are really useful and important
+
+Labels will place text on top of the element.... labelling it
+
+Classes can get overwritten with other newer classes if they don't interact well.
+
+QCC
+How does a cell equate to other units of measure (e.g. centimeters, inches).
+
+Q0
+Asked Shriya multiple times.
+Notes.txt did not exist -> ask many of the questions
+
+Q1
+Looked here for more info:
+https://get.foundation/
+Didn't find anything specifically that we wanted to use. Just wanted to read the doc a little.
