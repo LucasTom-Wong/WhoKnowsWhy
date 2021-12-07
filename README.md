@@ -1,3 +1,3 @@
-# ltomwong20
+# Workshop of Lucas (LTW) Tom-Wong
 
-// Repository for SoftDev work
+// SoftDev 2021-2022
