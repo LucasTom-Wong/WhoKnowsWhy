@@ -1,0 +1,2 @@
+use ssh no root
+ubuntu 20.04.3
