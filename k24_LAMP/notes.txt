@@ -1,2 +1,42 @@
 use ssh no root
+
 ubuntu 20.04.3
+
+$sudo apt install
+
+$sudo su ----> super user permanently till close terminal window
+root..$
+
+$su thluffy
+changes directory
+
+ctrl-d
+-> exits shell (shell still open)
+
+LAMP stack
+linux
+apache
+sqlite
+python 3?
+
+apt is the pip for ubuntu (installer)
+- installs things and everything it is dependent on
+
+in order to access droplet
+
+$ ssh root@ip-address
+
+--- throws you into the root
+-- no need for sudo
+
+then for installing stack
+
+sudo apt update
+
+sudo apt install apache2
+
+sudo ufw app list
+- checks available applications
+
+sudo apt install sqlite3
+- sqlite
