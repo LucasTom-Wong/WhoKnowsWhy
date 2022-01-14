@@ -27,7 +27,7 @@ in order to access droplet
 $ ssh root@ip-address
 
 --- throws you into the root
--- no need for sudo
+-- no need for sudo?????
 
 then for installing stack
 
@@ -40,3 +40,31 @@ sudo ufw app list
 
 sudo apt install sqlite3
 - sqlite
+
+sudo apt install python3
+- python
+
+
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-18-04-quickstart
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04#step-2-%E2%80%94-copying-the-public-key-to-your-ubuntu-server
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04
+
+
+remove root user
+
+-> create new user
+ssh root@your_server_ip_address
+adduser name
+
+give new user sudo perms
+usermod -aG sudo name
+
+switch user (switches to name)
+su - name
+
+test sudo perms
+sudo ls -la /root
+
+
+notes: dont have ssh key with a root user
