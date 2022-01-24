@@ -3,42 +3,53 @@
 ## Overview
 Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apache2 web server on it.
 
-### Estimated Time Cost: _
+### Estimated Time Cost: A bit
 
 ### Prerequisites:
 
-- Something you should know beforehand...
-- Something you will need installed beforehand...
-
-1. Step blah blah blah, and/or...
-1. Step, with `inline code`, and/or...
-1. Step, with
-    ```
-    generic code block or terminal command
-    ```
-   and/or...
-    ```javascript
-    var foo = "this that JS tho";
-    ```
-   and/or...
-    ```python
-    print("this that Python tho")
-    ```
-   and/or...
-1. Step, with [hyperlink](https://xkcd.com)s...
-
+- A droplet
 
 ### Resources
 * https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
+* https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-18-04-quickstart
+* https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04#step-2-%E2%80%94-copying-the-public-key-to-your-ubuntu-server
+* https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04
 
 ---
 
-Accurate as of (last update): 2022-01-dd
+### Steps
+
+#### Setting up LAMP stack
+
+$ ssh root@ip-address
+
+$ sudo apt update
+
+$ sudo apt install apache2
+
+$ sudo apt install sqlite3
+
+$ sudo apt install python3
+
+#### Creating user
+
+$ ssh root@your_server_ip_address
+
+$ adduser name
+
+$ usermod -aG sudo name
+
+$ su name
+
+* Note: you can test if your user works with the following line
+$ sudo ls -la /root
+
+#### Removing root user
+
+
+
+Accurate as of (last update): 2022-01-24
 
 #### Contributors:  
-Clyde "Thluffy" Sinclair  
-Joan of Arc, pd1  
-Buttercup, pd9  
-Blossom, pd9  
-Bubbles, pd9  
-Fake Grimlock, pd2  
+Julia Nelson, pd1
+Lucas Tom-Wong, pd1

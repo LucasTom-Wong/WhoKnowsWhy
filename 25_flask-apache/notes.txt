@@ -1,0 +1,33 @@
+perms
+
+U      G      W
+rwx | rwx | rwx
+
+
+------ Ex -----
+U    G    W
+111 111 000
+7    7    0
+
+chmod 770 file
+
+101 = 5 -> useful, read and execute but no write
+
+$top
+- live feed of what is doing what (q to quit)
+
+www-data -> apache
+
+chown www-data file
+
+chgrwp www-data file
+-> only for files that need perms
+-> only one file at a time
+
+ports -> probably important
+
+-> start apache?
+sudo service apache2 start
+
+httpd.apache.org/
+modwsgi.readthedocs.io
