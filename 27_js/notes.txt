@@ -1,0 +1,24 @@
+Team Thumbs :: Oscar Wang, Lucas Tom-Wong 
+SoftDev pd1
+K27 -- Basic functions in JavaScript
+2022-02-03
+
+DISCO
+-----------------------------------------------------------------
+JS is like java and scheme
+Java syntax
+Scheme-like somehow
+
+no need to define var type
+
+to make function
+
+*var funcName (varA){
+}
+
+QCC
+-----------------------------------------------------------------
+* Why...?
+* Huh?
+* Whuh now?
+=================================================================
