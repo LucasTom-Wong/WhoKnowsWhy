@@ -1,0 +1,1 @@
+do I use let for functions that you want to call in other places
