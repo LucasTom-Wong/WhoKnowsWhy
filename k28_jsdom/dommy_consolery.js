@@ -113,6 +113,10 @@ let gcd = function(a, b){
   return 0;
 }
 
+// find prime factors for each numbers seperately
+let prime_factorization = function(n){
+  return 0;
+}
 
 let display = function(n){
   console.log(n);
