@@ -110,13 +110,25 @@ let fib = function(n) {
 //gcd
 //take prime factorization and multiple all common
 let gcd = function(a, b){
-  return 0;
+  if (a == 0 || b == 0){
+    return 0;
+  }
+  else {
+    a = Math.abs(a);
+    b = Math.abs(b);
+    while (b != 0){
+      let x = a % b;
+      a = b;
+      b = x;
+    }
+    return a;
+  }
 }
 
 // find prime factors for each numbers seperately
-let prime_factorization = function(n){
-  return 0;
-}
+// let prime_factorization = function(n){
+//   return 0;
+// }
 
 let display = function(n){
   console.log(n);
