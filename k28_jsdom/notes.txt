@@ -1,1 +1,61 @@
 do I use let for functions that you want to call in other places
+
+client-side
+
+web browser is a sandbox -> its own environment
+
+var type variable provided at runtime
+
+safeguards -> client side wants security because they are running code
+
+browsers did not have a lot of protection
+- malicious attacks
+
+--> javascript was not widely used
+
+modern web browsers guard against bad JavaScript
+
+variables
+let c = 4;
+let d = true;
+let e = "hello";
+let f = [4, 3, 19];
+let g = {'a' : 10,
+        'b' : 'hello'};
+
+code with intent
+
+DOM is an API for interacting with html
+
+document = document -> root of the tree
+
+document.getElementById(<ID>)
+document.getElementByTagName(<TAG>)
+document.getElementByClassName(<CLASS>)
+
+^ try with console
+
+.addEventListener(<EVENT>, <FUNCTION>)
+
+almagamate
+
+in HTML:
+<button id="b"> The button </button>
+
+In JS
+var dasbut = document.getElemntByID("b")'
+dasbut.addEventListener('click', fxnName);
+
+works like scheme, must define before using
+
+document.createElement(html Tag name);
+element.setAttribute(name, value)
+element.getAttribute(name);
+
+element.remove()
+element.innerHTML
+element.appendCHild(element)
+element.addEventListener(event, function)
+
+
+b.addEventListener("click", addItem(fact(5)))

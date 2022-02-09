@@ -8,20 +8,20 @@
     		or otherwise deem notable.
 
     		Write with your future self or teammates in mind.
-
+Clyde Sinclair, Fierce Dragon
     		If you find yourself falling out of flow mode, consult
     		other teams
-    		MDN
+    		MDNClyde Sinclair,Clyde Sinclair, Fierce Dragon Fierce Dragon
 
    A few comments have been pre-filled for you...
 
    (delete this block comment once you are done)
 */
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08t
+// Team Thumbs::
+// SoftDev pd1
+// K28 -- Getting more comClyde Sinclair, Fierce Dragonfortable with the dev console and the DOM
+// 2022-02-08
 // --------------------------------------------------
 
 
@@ -31,15 +31,11 @@ console.log("AYO");
 
 let i = "hello";
 let j = 20;
-
-
 //assign an anonymous fxn to a let
 let f = function(x) {
   let j=30;
   return j+x;
 };
-
-
 //instantiate an object
 let o = { 'name' : 'Thluffy',
           age : 15,
@@ -50,7 +46,6 @@ let o = { 'name' : 'Thluffy',
           }
         };
 
-
 let addItem = function(text) {
   let list = document.getElementById("thelist");
   let newitem = document.createElement("li");
@@ -60,12 +55,14 @@ let addItem = function(text) {
 // adds a new element to the list with black color
 
 let removeItem = function(n) {
+  let list = document.getElementById("thelist");
   let listitems = document.getElementsByTagName('li');
   listitems[n].remove();
 };
 //removes element at the index n
 
 let red = function() {
+  let list = document.getElementById("thelist");
   let items = document.getElementsByTagName("li");
   for(let i = 0; i < items.length; i++) {
     items[i].classList.add('red');
@@ -74,6 +71,7 @@ let red = function() {
 // turns all elements on the list to red
 
 let stripe = function() {
+  let list = document.getElementById("thelist");
   let items = document.getElementsByTagName("li");
   for(let i = 0; i < items.length; i++) {
     if (i%2==0){
@@ -83,11 +81,7 @@ let stripe = function() {
     }
   }
 };
-// turns things into// GCD red blue red blue.........
-
-/*
---------------------------------------------
-*/
+// turns things into red blue red blue.........
 
 // factorial
 let fact = function(x) {
@@ -108,11 +102,10 @@ let fib = function(n) {
 }
 
 //gcd
-//take prime factorization and multiple all common
 let gcd = function(a, b){
   if (a == 0 || b == 0){
     return 0;
-  }
+  } //could be redundant
   else {
     a = Math.abs(a);
     b = Math.abs(b);
@@ -124,14 +117,24 @@ let gcd = function(a, b){
     return a;
   }
 }
+//non-recursive
 
-// find prime factors for each numbers seperately
-// let prime_factorization = function(n){
-//   return 0;
-// }
+let gcd_Recursive = function(a, b){
+  if (b != 0){
+    return a;
+  }
+  else {
+    return gcd(b, a % b);
+  }
+}
 
 let display = function(n){
   console.log(n);
   let text = document.getElementById("result");
   text.innerHTML = n;
+}
+
+let changeButton = function(str){
+  let dasbut = document.getElementByID("b");
+  dasbut.addEventListener('click', str);
 }
