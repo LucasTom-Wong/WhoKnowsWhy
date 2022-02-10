@@ -1,0 +1,10 @@
+Id in document.getElementById is Id -> keep track of capital and lowercase
+
+id of object in html is defined by id you set
+
+button.addEventListener("click", function(){
+  display(gcd(15, 20));
+});
+--listens to click, then does function() which is defined below it
+
+grab element (textbox) and then grab its value attribute
