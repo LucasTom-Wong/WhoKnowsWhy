@@ -36,7 +36,7 @@ Clyde Sinclair, Fierce Dragon
 //   return j+x;
 // };
 // //instantiate an object
-// let o = { 'name' : 'Thluffy',
+// let o = { 'name' : 'Thluffy=',
 //           age : 15,
 //           items : [10, 20, 30, 40],
 //           morestuff : {a : 1, b : 'ayo'},
@@ -122,7 +122,7 @@ let gcd_Recursive = function(a, b){
   if (b != 0){
     return a;
   }
-  else { = a.value;
+  else {b = a.value;
     return gcd(b, a % b);
   }
 }
@@ -138,25 +138,33 @@ let display = function(n){
 //   dasbut.addEventListener('click', str);
 // }
 
-let fib_button = document.getElementById("fib");
-fib_button.addEventListener("click", function(){
+let show_Fib = function(){
   let a = document.getElementById("a");
   let a_num = a.value;
   display(fib(a_num));
-});
+}
 
-let fact_button = document.getElementById("fact");
-fact_button.addEventListener("click", function(){
+let show_Fact = function(){
   let a = document.getElementById("a");
   let a_num = a.value;
   display(fact(a_num));
-});
+}
 
-let gcd_button = document.getElementById("gcd");
-gcd_button.addEventListener("click", function(){
+let show_GCD = function(){
   let a = document.getElementById("a");
   let a_num = a.value;
   let b = document.getElementById("b");
   let b_num = b.value;
   display(gcd(a_num, b_num));
-});
+}
+
+//listener
+let fib_button = document.getElementById("fib");
+fib_button.addEventListener("click", show_Fib
+);
+
+let fact_button = document.getElementById("fact");
+fact_button.addEventListener("click", show_Fact);
+
+let gcd_button = document.getElementById("gcd");
+gcd_button.addEventListener("click", show_GCD);

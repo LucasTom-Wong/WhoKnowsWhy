@@ -8,3 +8,7 @@ button.addEventListener("click", function(){
 --listens to click, then does function() which is defined below it
 
 grab element (textbox) and then grab its value attribute
+
+function(){} can be replaced with function_name
+
+that function_name should not have parameters probably
