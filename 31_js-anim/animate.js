@@ -22,6 +22,8 @@ ctx.fillStyle = "#B4CEB3";// YOUR CODE HERE
 var requestID;  //init global var for use with animation frames
 // var start = Date.now();
 
+let speed = 0;
+
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
@@ -42,6 +44,7 @@ var drawCircle = function(){
 
 //var drawDot = function() {
 var drawDot = () => {
+  requestID = window.requestAnimationFrame(drawDot);
   console.log("drawDot invoked...")
   // YOUR CODE HERE
   if (growing){
@@ -62,12 +65,10 @@ var drawDot = () => {
       drawCircle();
     }
   }
-  requestID = window.requestAnimationFrame(drawDot);
   /*
     ...to
     Wipe the canvas,
     Repaint the circle,
-
     ...and somewhere (where/when is the right time?)
     Update requestID to propagate the animation.
     You will need
@@ -93,6 +94,19 @@ var stopIt = () => {
   */
 };
 
+let display_Speed = function(){
+  //  console.log(n);
+  let text = document.getElementById("speedlevel");
+  text.innerHTML = speed;
+}
 
-dotButton.addEventListener( "click", drawDot );
-stopButton.addEventListener( "click",  stopIt );
+dotButton.addEventListener("click", function(){
+  drawDot();
+  speed+=1;
+  display_Speed();
+});
+stopButton.addEventListener("click", function(){
+  stopIt();
+  speed-=1;
+  display_Speed();
+});
