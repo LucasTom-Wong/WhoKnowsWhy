@@ -20,15 +20,17 @@ var ctx = c.getContext("2d");// YOUR CODE HERE
 ctx.fillStyle = "#B4CEB3";// YOUR CODE HERE
 
 var requestID;  //init global var for use with animation frames
+// var start = Date.now();
 
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
-  ctx.clearRect(0, 0, c.witdh, c.height);
+  ctx.clearRect(0, 0, c.width, c.height);
   // YOUR CODE HERE
 };
 
 var radius = 0;
+var radius_growth = 1;
 var growing = true;
 
 var drawCircle = function(){
@@ -47,7 +49,7 @@ var drawDot = () => {
     else {
       console.log("growing");
       clear();
-      radius+=10;
+      radius+=radius_growth;
       drawCircle();
     }
   }
@@ -56,10 +58,11 @@ var drawDot = () => {
     else{
       console.log("shrinking");
       clear();
-      radius-=10;
+      radius-=radius_growth;
       drawCircle();
     }
   }
+  requestID = window.requestAnimationFrame(drawDot);
   /*
     ...to
     Wipe the canvas,
@@ -77,8 +80,9 @@ var drawDot = () => {
 //var stopIt = function() {
 var stopIt = () => {
   console.log("stopIt invoked...")
-  console.log( requestID );
-
+  console.log(requestID);
+  let soup = window.cancelAnimationFrame(requestID);
+  console.log(soup);
   // YOUR CODE HERE
   /*
     ...to

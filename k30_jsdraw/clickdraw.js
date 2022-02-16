@@ -35,7 +35,10 @@ let drawCircle = function(e){
   let mouseY = event.offsetY;
   console.log("mouseclick at ", mouseX, mouseY);
   ctx.fillStyle="#xff0000";
-  ctx.fillRect(mouseX, mouseY, 100, 200);
+  ctx.beginPath();
+  ctx.arc(mouseX, mouseY, 50, 0, 2 * Math.PI);
+  ctx.stroke();
+  ctx.fill();
 }
 //draws cricle at point of mouse
 
