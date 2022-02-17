@@ -44,7 +44,7 @@ var drawCircle = function(){
 
 //var drawDot = function() {
 var drawDot = () => {
-  requestID = window.requestAnimationFrame(drawDot);
+  window.cancelAnimationFrame(requestID);
   console.log("drawDot invoked...")
   // YOUR CODE HERE
   if (growing){
@@ -65,6 +65,7 @@ var drawDot = () => {
       drawCircle();
     }
   }
+  requestID = window.requestAnimationFrame(drawDot);
   /*
     ...to
     Wipe the canvas,
