@@ -19,11 +19,14 @@ ctx.fillStyle = "#B4CEB3";// YOUR CODE HERE
 var requestID;  //init global var for use with animation frames
 // let speed = 0; //number you see
 
+let x;
+let y;
+let dx;
+let dy;
+
 var radius = 0;
 var radius_growth = 1; //i had it manually press to increase/decrease size because animation is hard, so it was greater than 1 at some point
 var growing = true;
-
-var image = 
 
 //var clear = function(e) {
 var clear = (e) => {
@@ -78,12 +81,17 @@ var drawDot = () => {
    */
 }
 
+var myImage = new Image(100, 200);
+// var image = ;
+myImage.src = 'picture.jpg';
+// document.body.appendChild(myImage);
+
 //var stopIt = function() {
 var stopIt = () => {
   console.log("stopIt invoked...")
   console.log(requestID);
   let soup = window.cancelAnimationFrame(requestID);
-  console.log(soup);
+  console.log(soup);startMove();
   // YOUR CODE HERE
   /*
     ...to
@@ -100,8 +108,20 @@ let display_Speed = function(){
   text.innerHTML = speed;
 }
 
-var movieTime = function(){
+var startMove = function(){
+  x = c.width / 2;
+  y = c.height / 2;
+  dx = 1;
+  dy = 1;
+}startMove();
 
+var movieTime = function(){
+  window.cancelAnimationFrame(requestID);
+  clear();
+
+  ctx.drawImage(image, x, y);
+
+  requestID = window.requestAnimationFrame(moveTime);
 }
 
 dotButton.addEventListener("click", function(){
@@ -118,4 +138,6 @@ stopButton.addEventListener("click", function(){
 movieButton.addEventListener("click", function(){
   stopIt();
   clear();
+  startMove();
+  movieTime();
 })
