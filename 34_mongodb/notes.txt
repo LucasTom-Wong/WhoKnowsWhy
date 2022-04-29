@@ -1,0 +1,31 @@
+Lucas Tom-Wong
+SoftDev 1
+K34 -- Another DB Perspective - MangoDB???? NO! MongoDB
+2022 - 04 - 27
+
+Seems I don't know quite enough of how databases work.
+I wonder what a non-relational database is....
+
+This video seems to be mainly focused on data management and how to store data.
+--> goes over different methods of storing
+--> linking seems important
+
+Linking vs Embedding
+-- hmm... not quite sure I understand
+
+Design Patterns -->
+--> Talked about before, interesting how data is stored, I should take notes.
+-->--> Each data has like name, and then also has like subnames which all store.. --> like an array
+
+SCHEMA. idk what this is
+
+Defining data model is something that I can do and something I should actively think about.
+--> I thought sql has this
+
+Relationships
+--> what is relational and non-relational databases?
+-->--> I don't quite know the differences.
+
+
+AAAAAAAAAAAAAAAAAAAAAAAaaa
+- need to learn more
