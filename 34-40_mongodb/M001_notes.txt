@@ -1,0 +1,59 @@
+MongoDB holds information in dictionaries in BSON --> JSON called documents
+Not SQL
+
+Connecting to Atlas:
+
+	mongo "mongodb+srv://sandbox.uualh.mongodb.net/myFirstDatabase" --username em
+
+Switch to this database:
+
+	use database_name
+
+Prettification
+	.pretty()
+
+Count
+	.count()
+
+Find something
+
+	db.(name of list dictionary).find({})
+	.findOne()
+
+Inserting
+	.insert({})
+
+Update
+	.updateOne({1}, {2})
+	.updateMany({1}, {2})
+{1} is where to update (parameters for finding document to update)
+{2} is how to update
+
+**use {"$set":{}} or {"$inc":{}}
+
+Logical operators
+	$eq
+	$gt
+	$gte
+	$lt
+	$lte
+
+Finding multiple in a document array
+  { "item":
+     { "$all": [ "v1", "v2", "v3" ] }
+
+Specifying results (output)
+	add , then
+	, {"what you wanb" : 1, "waht you also want" : 1}
+	0s can be used to exclude, 1 is include
+
+Elem match
+	matches at least one element in array
+	db.grades.find({ "scores": { "$elemMatch": { "type": "extra credit" } }
+               }).pretty()
+
+Subdocuments
+	"x.y.z.x1"
+	for first element in array use 0" (use place in array)
+
+
